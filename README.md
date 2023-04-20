@@ -3,10 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/SystemRDL/PeakRDL/badge.svg?branch=main)](https://coveralls.io/github/SystemRDL/PeakRDL?branch=main)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/peakrdl.svg)](https://pypi.org/project/peakrdl)
 
-This is a fork of the original project, with the intent of adding experimental (very limited) parametrization support for regblock output. All parameters specified by the user (in the regblock sub-commnad) as --keep_params PARA1 PARAM2 ... will retain their symbolic, unresolved value (e.g. 'PARAM1`) instead of being resolved to actual (most commonly - integer) values. Support is provided for:
-
-Parametrization of the dimensions of 1D array of registers (MDA - multi-dim - wip). The array dimension size must be an expression containing only the name of the parameter (without any further arithmetic or other operands).
-Parametrization of the reset value of individual fields. Again - expression must be as 1. above.
+For the description of this fork, please see https://github.com/galaviel/systemrdl-compiler-Parametrized/
 
 # PeakRDL
 
