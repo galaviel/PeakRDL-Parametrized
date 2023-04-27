@@ -123,11 +123,15 @@ def elaborate(rdlc: 'RDLCompiler', parameters: Dict[str, Any], options: 'argpars
         root = rdlc.elaborate(
             top_def_name=options.top_def_name,
             inst_name=options.inst_name,
-            parameters=parameters
+            parameters=parameters,
+            options=options
         )
     except (ValueError, TypeError) as e:
         # Parameter issues raise ValueError or TypeError
         # TODO: Fix exception types once they become specialized in the compiler
+        # galaviel for debug - print the exception - so I can see the stack trace..otherwise
+        # very hard to pin-point the point of failure in the code.
+        if True: print(e)
         rdlc.msg.fatal(e.args[0])
 
     return root.top
